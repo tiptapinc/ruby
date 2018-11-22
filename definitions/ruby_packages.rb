@@ -25,7 +25,7 @@ define :ruby_packages, action: :install do
   packages = case node['platform_family']
              when 'debian'
                [
-                 "ruby#{rv}-full",
+                 "ruby#{rv}",
                  "libopenssl-ruby#{rv}",
                  ('libshadow-ruby1.8' if rv == '1.8')
                ].compact
